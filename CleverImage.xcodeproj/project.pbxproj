@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25088DD929CDD33E006799CA /* CleverImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; };
+		25088DE929CDD589006799CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 25088DE829CDD589006799CA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		25088DD029CDD33D006799CA /* CleverImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleverImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25088DD829CDD33E006799CA /* CleverImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25088DE829CDD589006799CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		25088DC629CDD33D006799CA = {
 			isa = PBXGroup;
 			children = (
+				25088DE829CDD589006799CA /* README.md */,
 				25088DD229CDD33D006799CA /* CleverImage */,
 				25088DDC29CDD33E006799CA /* CleverImageTests */,
 				25088DD129CDD33D006799CA /* Products */,
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25088DE929CDD589006799CA /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
