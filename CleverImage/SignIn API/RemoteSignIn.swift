@@ -12,9 +12,10 @@ public class RemoteSignIn: SignInUseCase {
     private let url: URL
     private let client: HTTPClient
 
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
         case encoding
         case connection
+        case invalidData
     }
 
     public init(url: URL, client: HTTPClient) {
@@ -29,8 +30,14 @@ public class RemoteSignIn: SignInUseCase {
             return .failure(Error.encoding)
         }
 
-        _ = await client.execute(urlRequest: request)
-        return .failure(Error.connection)
+        let result = await client.execute(urlRequest: request)
+
+        switch result {
+        case .success:
+            return .failure(Error.invalidData)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
 
     private func sha1(_ input: String) -> String {

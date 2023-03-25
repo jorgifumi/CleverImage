@@ -48,6 +48,21 @@ final class RemoteSignInTests: XCTestCase {
         }
     }
 
+    func test_signIn_deliversErrorOnInvalidData() async {
+        let (sut, client) = makeSUT()
+        let invalidData = "invalid_data".data(using: .utf8)!
+        client.result = .success((invalidData, HTTPURLResponse()))
+
+        let result = await sut.signIn(username: "any username", password: "any password")
+
+        switch result {
+        case let .failure(error) where error as? RemoteSignIn.Error == RemoteSignIn.Error.invalidData:
+            break
+        default:
+            XCTFail("Expected invalid data error, got \(result) instead")
+        }
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(url: URL = anyURL(), file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteSignIn, client: HTTPClientSpy) {
