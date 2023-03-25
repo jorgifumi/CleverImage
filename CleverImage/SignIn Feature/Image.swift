@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Image {
+public struct Image: Equatable {
     let data: Data
 
     public init(data: Data = Data()) {

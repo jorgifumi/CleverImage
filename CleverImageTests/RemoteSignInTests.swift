@@ -34,6 +34,20 @@ final class RemoteSignInTests: XCTestCase {
         XCTAssertEqual(executedRequest.httpBody, "username=any%20username".data(using: .utf8))
     }
 
+    func test_signIn_deliversErrorOnClientError() async {
+        let (sut, client) = makeSUT()
+        client.result = .failure(anyNSError())
+
+        let result = await sut.signIn(username: "any username", password: "any password")
+
+        switch result {
+        case .failure:
+            break
+        case .success:
+            XCTFail("Expected failure, got \(result) instead")
+        }
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(url: URL = anyURL(), file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteSignIn, client: HTTPClientSpy) {
@@ -46,10 +60,11 @@ final class RemoteSignInTests: XCTestCase {
 
     private class HTTPClientSpy: HTTPClient {
         var executedRequests = [URLRequest]()
+        var result: HTTPClient.Result = .failure(anyNSError())
 
         func execute(urlRequest: URLRequest) async -> HTTPClient.Result {
             executedRequests.append(urlRequest)
-            return .success((Data(), HTTPURLResponse()))
+            return result
         }
     }
 }

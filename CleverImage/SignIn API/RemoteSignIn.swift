@@ -14,6 +14,7 @@ public class RemoteSignIn: SignInUseCase {
 
     enum Error: Swift.Error {
         case encoding
+        case connection
     }
 
     public init(url: URL, client: HTTPClient) {
@@ -29,7 +30,7 @@ public class RemoteSignIn: SignInUseCase {
         }
 
         _ = await client.execute(urlRequest: request)
-        return .success(Image())
+        return .failure(Error.connection)
     }
 
     private func sha1(_ input: String) -> String {
