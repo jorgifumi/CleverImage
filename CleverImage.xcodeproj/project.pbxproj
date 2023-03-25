@@ -11,6 +11,8 @@
 		25088DE929CDD589006799CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 25088DE829CDD589006799CA /* README.md */; };
 		25088DEB29CEF422006799CA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DEA29CEF422006799CA /* Image.swift */; };
 		25088DED29CEF49A006799CA /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DEC29CEF49A006799CA /* SignInUseCase.swift */; };
+		25088DF029CEF8DE006799CA /* RemoteSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */; };
+		25088DF329CEFA3B006799CA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF229CEFA3B006799CA /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		25088DE829CDD589006799CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		25088DEA29CEF422006799CA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		25088DEC29CEF49A006799CA /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
+		25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSignInTests.swift; sourceTree = "<group>"; };
+		25088DF229CEFA3B006799CA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		25088DD229CDD33D006799CA /* CleverImage */ = {
 			isa = PBXGroup;
 			children = (
+				25088DF129CEFA29006799CA /* Shared API */,
 				25088DEE29CEF867006799CA /* SignIn Feature */,
 			);
 			path = CleverImage;
@@ -80,6 +85,7 @@
 		25088DDC29CDD33E006799CA /* CleverImageTests */ = {
 			isa = PBXGroup;
 			children = (
+				25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */,
 			);
 			path = CleverImageTests;
 			sourceTree = "<group>";
@@ -91,6 +97,14 @@
 				25088DEC29CEF49A006799CA /* SignInUseCase.swift */,
 			);
 			path = "SignIn Feature";
+			sourceTree = "<group>";
+		};
+		25088DF129CEFA29006799CA /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				25088DF229CEFA3B006799CA /* HTTPClient.swift */,
+			);
+			path = "Shared API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +172,7 @@
 					};
 					25088DD729CDD33E006799CA = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -205,6 +220,7 @@
 			files = (
 				25088DED29CEF49A006799CA /* SignInUseCase.swift in Sources */,
 				25088DEB29CEF422006799CA /* Image.swift in Sources */,
+				25088DF329CEFA3B006799CA /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25088DF029CEF8DE006799CA /* RemoteSignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +427,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 93RW74SNFB;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverImageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -426,10 +450,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 93RW74SNFB;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverImageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

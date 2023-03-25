@@ -9,4 +9,8 @@ import Foundation
 
 public struct Image {
     let data: Data
+
+    public init(data: Data = Data()) {
+        self.data = data
+    }
 }
