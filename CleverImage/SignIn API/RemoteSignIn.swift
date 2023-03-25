@@ -22,11 +22,12 @@ public class RemoteSignIn: SignInUseCase {
     }
 
     public func signIn(username: String, password: String) async -> SignInUseCase.Result {
-        guard var request = encodedRequest(url: url.appending(path: "/download/bootcamp/image.php"), username: username) else {
+        guard let request = encodedRequest(url: url.appending(path: "/download/bootcamp/image.php"),
+                                           username: username,
+                                           password: sha1(password)) else {
             return .failure(Error.encoding)
         }
 
-        request.addValue(sha1(password), forHTTPHeaderField: "Authorization")
         _ = await client.execute(urlRequest: request)
         return .success(Image())
     }
@@ -43,7 +44,7 @@ public class RemoteSignIn: SignInUseCase {
         return digest.map { String(format: "%02x", $0) }.joined()
     }
 
-    private func encodedRequest(url: URL, username: String) -> URLRequest? {
+    private func encodedRequest(url: URL, username: String, password: String) -> URLRequest? {
         let parameters = [
             "username": username
         ]
@@ -60,7 +61,7 @@ public class RemoteSignIn: SignInUseCase {
         let bodyString = urlComponents?.percentEncodedQuery ?? ""
         request.httpBody = bodyString.data(using: .utf8)
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-
+        request.addValue(password, forHTTPHeaderField: "Authorization")
         return request
     }
 }
