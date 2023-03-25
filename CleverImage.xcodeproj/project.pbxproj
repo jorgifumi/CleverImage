@@ -17,6 +17,7 @@
 		25088DF829CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */; };
 		25088DFB29CF15D9006799CA /* RemoteSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DFA29CF15D9006799CA /* RemoteSignIn.swift */; };
 		25088DFD29CF2A6C006799CA /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DFC29CF2A6C006799CA /* UIImage+TestHelpers.swift */; };
+		25088DFF29CF6951006799CA /* RemoteImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DFE29CF6951006799CA /* RemoteImageMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		25088DFA29CF15D9006799CA /* RemoteSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSignIn.swift; sourceTree = "<group>"; };
 		25088DFC29CF2A6C006799CA /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		25088DFE29CF6951006799CA /* RemoteImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				25088DFA29CF15D9006799CA /* RemoteSignIn.swift */,
+				25088DFE29CF6951006799CA /* RemoteImageMapper.swift */,
 			);
 			path = "SignIn API";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				25088DED29CEF49A006799CA /* SignInUseCase.swift in Sources */,
 				25088DFB29CF15D9006799CA /* RemoteSignIn.swift in Sources */,
 				25088DEB29CEF422006799CA /* Image.swift in Sources */,
+				25088DFF29CF6951006799CA /* RemoteImageMapper.swift in Sources */,
 				25088DF329CEFA3B006799CA /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
