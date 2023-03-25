@@ -1,38 +1,38 @@
-# Cleverlance App – Image Feature
+# Cleverlance App – Sign In Feature
 
 
 ## BDD Specs
 
-### Story: Customer requests to see image
+### Story: Customer requests to sign in
 
 ### Narrative #1
 
 > As an online customer
-I want the app to load an image
-So I can view it
+I want the app to let me sign in
+So I can view the image
 
 #### Scenarios (Acceptance criteria)
 
 ```
 Given the customer has connectivity
 And the customer inputs a correct username/password
-When the customer requests to see the image
+When the customer requests to sign in
 Then the app should display the image from remote
 
 Given the customer has connectivity
 And the customer inputs an incorrect username/password
-When the customer requests to see the image
+When the customer requests to sign in
 Then the app should display an error message
 
 Given the customer doesn't have connectivity
-When the customer requests to see the image
+When the customer requests to sign in
 Then the app should display an error message
 ```
 
 
 ## Use Cases
 
-### Load Image Data From Remote Use Case
+### Sign In Use Case
 
 #### Data:
 - URL
@@ -40,7 +40,7 @@ Then the app should display an error message
 - Password
 
 #### Primary course (happy path):
-1. Execute "Load Image Data" command with above data.
+1. Execute "SignIn" command with above data.
 2. System downloads data from the URL.
 3. System process downloaded data.
 4. System delivers image data.
