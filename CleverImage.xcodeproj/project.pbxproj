@@ -13,6 +13,8 @@
 		25088DED29CEF49A006799CA /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DEC29CEF49A006799CA /* SignInUseCase.swift */; };
 		25088DF029CEF8DE006799CA /* RemoteSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */; };
 		25088DF329CEFA3B006799CA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF229CEFA3B006799CA /* HTTPClient.swift */; };
+		25088DF629CEFF8B006799CA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */; };
+		25088DF829CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		25088DEC29CEF49A006799CA /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSignInTests.swift; sourceTree = "<group>"; };
 		25088DF229CEFA3B006799CA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		25088DDC29CDD33E006799CA /* CleverImageTests */ = {
 			isa = PBXGroup;
 			children = (
+				25088DF429CEFF75006799CA /* Helpers */,
 				25088DEF29CEF8DE006799CA /* RemoteSignInTests.swift */,
 			);
 			path = CleverImageTests;
@@ -105,6 +110,15 @@
 				25088DF229CEFA3B006799CA /* HTTPClient.swift */,
 			);
 			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		25088DF429CEFF75006799CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */,
+				25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25088DF629CEFF8B006799CA /* SharedTestHelpers.swift in Sources */,
 				25088DF029CEF8DE006799CA /* RemoteSignInTests.swift in Sources */,
+				25088DF829CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
