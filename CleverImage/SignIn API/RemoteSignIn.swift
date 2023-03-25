@@ -33,9 +33,9 @@ public class RemoteSignIn: SignInUseCase {
         let result = await client.execute(urlRequest: request)
 
         switch result {
-        case .success:
-            return .failure(Error.invalidData)
-        case .failure(let error):
+        case let .success((data, _)):
+            return RemoteSignIn.map(data)
+        case let .failure(error):
             return .failure(error)
         }
     }
@@ -71,5 +71,34 @@ public class RemoteSignIn: SignInUseCase {
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue(password, forHTTPHeaderField: "Authorization")
         return request
+    }
+
+    static func map(_ data: Data) -> RemoteSignIn.Result {
+        do {
+            let image = try RemoteImageMapper.map(data)
+            return .success(image)
+        } catch {
+            return .failure(Error.invalidData)
+        }
+    }
+}
+
+public final class RemoteImageMapper {
+
+    private struct Root: Decodable {
+        let image: String
+    }
+
+    public enum Error: Swift.Error {
+        case invalidData
+    }
+
+    public static func map(_ data: Data) throws -> Image {
+        guard let root = try? JSONDecoder().decode(Root.self, from: data),
+              let imageData = Data(base64Encoded: root.image) else {
+            throw Error.invalidData
+        }
+
+        return Image(data: imageData)
     }
 }

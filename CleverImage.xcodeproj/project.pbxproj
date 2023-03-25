@@ -16,6 +16,7 @@
 		25088DF629CEFF8B006799CA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */; };
 		25088DF829CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */; };
 		25088DFB29CF15D9006799CA /* RemoteSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DFA29CF15D9006799CA /* RemoteSignIn.swift */; };
+		25088DFD29CF2A6C006799CA /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088DFC29CF2A6C006799CA /* UIImage+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		25088DFA29CF15D9006799CA /* RemoteSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSignIn.swift; sourceTree = "<group>"; };
+		25088DFC29CF2A6C006799CA /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				25088DF729CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift */,
 				25088DF529CEFF8B006799CA /* SharedTestHelpers.swift */,
+				25088DFC29CF2A6C006799CA /* UIImage+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				25088DF629CEFF8B006799CA /* SharedTestHelpers.swift in Sources */,
 				25088DF029CEF8DE006799CA /* RemoteSignInTests.swift in Sources */,
 				25088DF829CF0133006799CA /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				25088DFD29CF2A6C006799CA /* UIImage+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

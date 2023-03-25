@@ -63,6 +63,22 @@ final class RemoteSignInTests: XCTestCase {
         }
     }
 
+    func test_signIn_deliversImageOnCorrectData() async throws {
+        let (sut, client) = makeSUT()
+        let image = makeImage()
+        let json = try JSONSerialization.data(withJSONObject: image.json)
+        client.result = .success((json, HTTPURLResponse()))
+
+        let result = await sut.signIn(username: "any username", password: "any password")
+
+        switch result {
+        case let .success(receivedImage):
+            XCTAssertEqual(receivedImage, image.model)
+        default:
+            XCTFail("Expected success result with image, got \(result) instead")
+        }
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(url: URL = anyURL(), file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteSignIn, client: HTTPClientSpy) {
@@ -71,6 +87,21 @@ final class RemoteSignInTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
+    }
+
+    private func makeImage() -> (model: Image, json: [String: Any]) {
+        let data = Data.makeImage()
+        let image = Image(data: data)
+        let json: [String: Any] = [
+            "image": data.base64EncodedString()
+        ]
+
+        return (image, json)
+    }
+
+    func makeImageJSON(_ items: [[String: Any]]) -> Data {
+        let json = ["image": items]
+        return try! JSONSerialization.data(withJSONObject: json)
     }
 
     private class HTTPClientSpy: HTTPClient {
