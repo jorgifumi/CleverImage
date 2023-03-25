@@ -72,8 +72,7 @@
 		25088DD229CDD33D006799CA /* CleverImage */ = {
 			isa = PBXGroup;
 			children = (
-				25088DEA29CEF422006799CA /* Image.swift */,
-				25088DEC29CEF49A006799CA /* SignInUseCase.swift */,
+				25088DEE29CEF867006799CA /* SignIn Feature */,
 			);
 			path = CleverImage;
 			sourceTree = "<group>";
@@ -83,6 +82,15 @@
 			children = (
 			);
 			path = CleverImageTests;
+			sourceTree = "<group>";
+		};
+		25088DEE29CEF867006799CA /* SignIn Feature */ = {
+			isa = PBXGroup;
+			children = (
+				25088DEA29CEF422006799CA /* Image.swift */,
+				25088DEC29CEF49A006799CA /* SignInUseCase.swift */,
+			);
+			path = "SignIn Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
