@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Image {
+public struct Image {
     let data: Data
 }
