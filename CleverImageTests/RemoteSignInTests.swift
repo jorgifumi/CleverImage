@@ -99,11 +99,6 @@ final class RemoteSignInTests: XCTestCase {
         return (image, json)
     }
 
-    func makeImageJSON(_ items: [[String: Any]]) -> Data {
-        let json = ["image": items]
-        return try! JSONSerialization.data(withJSONObject: json)
-    }
-
     private class HTTPClientSpy: HTTPClient {
         var executedRequests = [URLRequest]()
         var result: HTTPClient.Result = .failure(anyNSError())
