@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CleverImage
 
 @main
 struct CleverAppApp: App {
+
+    let signInUseCase = RemoteSignIn(url: URL(string: "https://mobility.cleverlance.com/")!,
+                                     client: URLSessionHTTPClient(session: .shared))
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(signInUseCase: signInUseCase)
         }
     }
 }

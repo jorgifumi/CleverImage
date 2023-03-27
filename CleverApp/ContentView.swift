@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import CleverImage
 
 struct ContentView: View {
+    let signInUseCase: SignInUseCase
+
+    init(signInUseCase: SignInUseCase) {
+        self.signInUseCase = signInUseCase
+    }
+
     var body: some View {
         VStack {
-            SignInView()
+            SignInView(signInUseCase: signInUseCase)
         }
         .padding()
     }
@@ -18,6 +25,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(signInUseCase: MockSignInUseCase())
     }
 }

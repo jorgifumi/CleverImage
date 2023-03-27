@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import CleverImage
 
 struct SignInView: View {
     @State private var username = ""
     @State private var password = ""
+
+    private var signInUseCase: SignInUseCase
+
+    init(signInUseCase: SignInUseCase) {
+        self.signInUseCase = signInUseCase
+    }
 
     var body: some View {
         VStack {
@@ -25,7 +32,15 @@ struct SignInView: View {
                 .padding()
 
             Button(action: {
-                // Acción para iniciar sesión
+                Task {
+                    let result = await signInUseCase.signIn(username: username, password: password)
+                    switch result {
+                    case .success(let image):
+                        break
+                    case .failure(let error):
+                        break
+                    }
+                }
             }) {
                 Text("Sign In")
                     .padding()
@@ -40,6 +55,6 @@ struct SignInView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(signInUseCase: MockSignInUseCase())
     }
 }
