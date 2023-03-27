@@ -25,8 +25,8 @@ public class RemoteSignIn: SignInUseCase {
 
     public func signIn(username: String, password: String) async -> SignInUseCase.Result {
         guard let request = encodedRequest(url: url.appending(path: "/download/bootcamp/image.php"),
-                                           username: username,
-                                           password: sha1(password)) else {
+                                           username: username.lowercased(),
+                                           password: sha1(password.lowercased())) else {
             return .failure(Error.encoding)
         }
 
