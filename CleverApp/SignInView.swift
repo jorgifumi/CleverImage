@@ -11,6 +11,9 @@ import CleverImage
 struct SignInView: View {
     @State private var username = ""
     @State private var password = ""
+    @State private var image: CleverImage.Image?
+    @State private var isLoading = false
+    @State private var errorMessage = ""
 
     private var signInUseCase: SignInUseCase
 
@@ -32,23 +35,36 @@ struct SignInView: View {
                 .padding()
 
             Button(action: {
-                Task {
-                    let result = await signInUseCase.signIn(username: username, password: password)
-                    switch result {
-                    case .success(let image):
-                        break
-                    case .failure(let error):
-                        break
-                    }
-                }
+                signIn()
             }) {
-                Text("Sign In")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                if isLoading {
+                    ProgressView()
+                } else {
+                    Text("Sign In")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
             }
             .padding()
+            Text(errorMessage)
+        }
+    }
+
+    private func signIn() {
+        isLoading = true
+        Task {
+            let result = await signInUseCase.signIn(username: username, password: password)
+            switch result {
+            case .success(let image):
+                self.image = image
+                errorMessage = ""
+            case .failure(let error):
+                self.image = nil
+                errorMessage = error.localizedDescription
+            }
+            isLoading = false
         }
     }
 }
