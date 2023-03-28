@@ -32,10 +32,12 @@ struct SignInView: View {
             } else {
                 TextField("Username", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .disabled(isLoading)
                     .padding()
 
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .disabled(isLoading)
                     .padding()
 
                 Button(action: {
@@ -51,6 +53,7 @@ struct SignInView: View {
                             .cornerRadius(10)
                     }
                 }
+                .disabled(isLoading)
                 .padding()
                 Text(errorMessage)
             }
