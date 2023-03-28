@@ -62,6 +62,7 @@ struct SignInView: View {
                 Text(errorMessage)
             }
         }
+        .animation(.easeIn)
     }
 
     private func signIn() {
