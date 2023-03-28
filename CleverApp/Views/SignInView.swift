@@ -9,42 +9,37 @@ import SwiftUI
 import CleverImage
 
 struct SignInView: View {
-    @State private var username = ""
-    @State private var password = ""
-    @State private var image: CleverImage.Image?
-    @State private var isLoading = false
-    @State private var errorMessage = ""
 
-    private var signInUseCase: SignInUseCase
+    @StateObject private var viewModel: SignInViewModel
 
-    init(signInUseCase: SignInUseCase) {
-        self.signInUseCase = signInUseCase
+    init(viewModel: SignInViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
         VStack {
-            if let image,
-               let uiImage = UIImage(data: image.data) {
-                SucessView(uiImage: uiImage, action: signOut)
+            if let imageData = viewModel.imageData,
+               let uiImage = UIImage(data: imageData) {
+                SucessView(uiImage: uiImage, action: viewModel.signOut)
             } else {
-                TextField("Username", text: $username)
+                TextField("Username", text: $viewModel.username)
                     .autocorrectionDisabled(true)
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .textContentType(.username)
-                    .disabled(isLoading)
+                    .disabled(viewModel.isLoading)
                     .padding()
 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .textContentType(.password)
-                    .disabled(isLoading)
+                    .disabled(viewModel.isLoading)
                     .padding()
 
                 Button(action: {
-                    signIn()
+                    Task { await viewModel.signIn() }
                 }) {
-                    if isLoading {
+                    if viewModel.isLoading {
                         ProgressView()
                     } else {
                         Text("Sign In")
@@ -54,37 +49,17 @@ struct SignInView: View {
                             .cornerRadius(10)
                     }
                 }
-                .disabled(isLoading)
+                .disabled(viewModel.isLoading)
                 .padding()
-                ErrorView(errorMessage: errorMessage)
+                ErrorView(errorMessage: viewModel.errorMessage)
             }
         }
         .animation(.easeIn)
-    }
-
-    private func signIn() {
-        isLoading = true
-        Task {
-            let result = await signInUseCase.signIn(username: username, password: password)
-            switch result {
-            case .success(let image):
-                self.image = image
-                errorMessage = ""
-            case .failure(let error):
-                signOut()
-                errorMessage = error.localizedDescription
-            }
-            isLoading = false
-        }
-    }
-
-    private func signOut() {
-        self.image = nil
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(signInUseCase: MockSignInUseCase())
+        SignInView(viewModel: SignInViewModel(signInUseCase: MockSignInUseCase()))
     }
 }

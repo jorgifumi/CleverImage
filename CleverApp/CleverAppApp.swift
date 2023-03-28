@@ -15,7 +15,7 @@ struct CleverAppApp: App {
                                      client: URLSessionHTTPClient(session: .shared))
     var body: some Scene {
         WindowGroup {
-            ContentView(signInUseCase: signInUseCase)
+            SignInView(viewModel: SignInViewModel(signInUseCase: signInUseCase))
         }
     }
 }
