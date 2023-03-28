@@ -30,6 +30,7 @@
 		25088E5829D1BEBB006799CA /* MockSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */; };
 		25088E5A29D1CCB2006799CA /* CleverImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; };
 		25088E5B29D1CCB2006799CA /* CleverImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25088E6129D334F4006799CA /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E6029D334F4006799CA /* Image+Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		25088E4A29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25088E5529D1BA69006799CA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignInUseCase.swift; sourceTree = "<group>"; };
+		25088E6029D334F4006799CA /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		25088E2C29D1B7BE006799CA /* CleverApp */ = {
 			isa = PBXGroup;
 			children = (
+				25088E5F29D334E2006799CA /* Helpers */,
 				25088E2D29D1B7BE006799CA /* CleverAppApp.swift */,
 				25088E2F29D1B7BE006799CA /* ContentView.swift */,
 				25088E5529D1BA69006799CA /* SignInView.swift */,
@@ -271,6 +274,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25088E5F29D334E2006799CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				25088E6029D334F4006799CA /* Image+Data.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +513,7 @@
 			files = (
 				25088E5629D1BA69006799CA /* SignInView.swift in Sources */,
 				25088E5829D1BEBB006799CA /* MockSignInUseCase.swift in Sources */,
+				25088E6129D334F4006799CA /* Image+Data.swift in Sources */,
 				25088E3029D1B7BE006799CA /* ContentView.swift in Sources */,
 				25088E2E29D1B7BE006799CA /* CleverAppApp.swift in Sources */,
 			);
