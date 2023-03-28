@@ -56,9 +56,7 @@ struct SignInView: View {
                 }
                 .disabled(isLoading)
                 .padding()
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundColor(.red)
+                ErrorView(errorMessage: errorMessage)
             }
         }
         .animation(.easeIn)
