@@ -26,27 +26,34 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "25088E2A29D1B7BE006799CA"
+            BuildableName = "CleverApp.app"
+            BlueprintName = "CleverApp"
+            ReferencedContainer = "container:CleverImage.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "25088DCF29CDD33D006799CA"
+            BuildableName = "CleverImage.framework"
+            BlueprintName = "CleverImage"
+            ReferencedContainer = "container:CleverImage.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25088E3929D1B7C1006799CA"
-               BuildableName = "CleverAppTests.xctest"
-               BlueprintName = "CleverAppTests"
-               ReferencedContainer = "container:CleverImage.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25088E4329D1B7C2006799CA"
-               BuildableName = "CleverAppUITests.xctest"
-               BlueprintName = "CleverAppUITests"
+               BlueprintIdentifier = "25088DD729CDD33E006799CA"
+               BuildableName = "CleverImageTests.xctest"
+               BlueprintName = "CleverImageTests"
                ReferencedContainer = "container:CleverImage.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -22,9 +22,6 @@
 		25088E2E29D1B7BE006799CA /* CleverAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E2D29D1B7BE006799CA /* CleverAppApp.swift */; };
 		25088E3229D1B7C1006799CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25088E3129D1B7C1006799CA /* Assets.xcassets */; };
 		25088E3529D1B7C1006799CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25088E3429D1B7C1006799CA /* Preview Assets.xcassets */; };
-		25088E3F29D1B7C2006799CA /* CleverAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E3E29D1B7C2006799CA /* CleverAppTests.swift */; };
-		25088E4929D1B7C2006799CA /* CleverAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E4829D1B7C2006799CA /* CleverAppUITests.swift */; };
-		25088E4B29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E4A29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift */; };
 		25088E5629D1BA69006799CA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E5529D1BA69006799CA /* SignInView.swift */; };
 		25088E5829D1BEBB006799CA /* MockSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */; };
 		25088E5A29D1CCB2006799CA /* CleverImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; };
@@ -41,20 +38,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 25088DCF29CDD33D006799CA;
 			remoteInfo = CleverImage;
-		};
-		25088E3B29D1B7C2006799CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25088DC729CDD33D006799CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25088E2A29D1B7BE006799CA;
-			remoteInfo = CleverApp;
-		};
-		25088E4529D1B7C2006799CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25088DC729CDD33D006799CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25088E2A29D1B7BE006799CA;
-			remoteInfo = CleverApp;
 		};
 		25088E5C29D1CCB2006799CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -97,11 +80,6 @@
 		25088E2D29D1B7BE006799CA /* CleverAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverAppApp.swift; sourceTree = "<group>"; };
 		25088E3129D1B7C1006799CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25088E3429D1B7C1006799CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		25088E3A29D1B7C1006799CA /* CleverAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25088E3E29D1B7C2006799CA /* CleverAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverAppTests.swift; sourceTree = "<group>"; };
-		25088E4429D1B7C2006799CA /* CleverAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25088E4829D1B7C2006799CA /* CleverAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverAppUITests.swift; sourceTree = "<group>"; };
-		25088E4A29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25088E5529D1BA69006799CA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignInUseCase.swift; sourceTree = "<group>"; };
 		25088E6329D35370006799CA /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
@@ -134,20 +112,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25088E3729D1B7C1006799CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25088E4129D1B7C2006799CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,8 +122,6 @@
 				25088DD229CDD33D006799CA /* CleverImage */,
 				25088DDC29CDD33E006799CA /* CleverImageTests */,
 				25088E2C29D1B7BE006799CA /* CleverApp */,
-				25088E3D29D1B7C2006799CA /* CleverAppTests */,
-				25088E4729D1B7C2006799CA /* CleverAppUITests */,
 				25088DD129CDD33D006799CA /* Products */,
 				25088E5929D1CCB2006799CA /* Frameworks */,
 			);
@@ -171,8 +133,6 @@
 				25088DD029CDD33D006799CA /* CleverImage.framework */,
 				25088DD829CDD33E006799CA /* CleverImageTests.xctest */,
 				25088E2B29D1B7BE006799CA /* CleverApp.app */,
-				25088E3A29D1B7C1006799CA /* CleverAppTests.xctest */,
-				25088E4429D1B7C2006799CA /* CleverAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,23 +213,6 @@
 				25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		25088E3D29D1B7C2006799CA /* CleverAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				25088E3E29D1B7C2006799CA /* CleverAppTests.swift */,
-			);
-			path = CleverAppTests;
-			sourceTree = "<group>";
-		};
-		25088E4729D1B7C2006799CA /* CleverAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				25088E4829D1B7C2006799CA /* CleverAppUITests.swift */,
-				25088E4A29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift */,
-			);
-			path = CleverAppUITests;
 			sourceTree = "<group>";
 		};
 		25088E5929D1CCB2006799CA /* Frameworks */ = {
@@ -365,42 +308,6 @@
 			productReference = 25088E2B29D1B7BE006799CA /* CleverApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		25088E3929D1B7C1006799CA /* CleverAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25088E5329D1B7C2006799CA /* Build configuration list for PBXNativeTarget "CleverAppTests" */;
-			buildPhases = (
-				25088E3629D1B7C1006799CA /* Sources */,
-				25088E3729D1B7C1006799CA /* Frameworks */,
-				25088E3829D1B7C1006799CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				25088E3C29D1B7C2006799CA /* PBXTargetDependency */,
-			);
-			name = CleverAppTests;
-			productName = CleverAppTests;
-			productReference = 25088E3A29D1B7C1006799CA /* CleverAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		25088E4329D1B7C2006799CA /* CleverAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25088E5429D1B7C2006799CA /* Build configuration list for PBXNativeTarget "CleverAppUITests" */;
-			buildPhases = (
-				25088E4029D1B7C2006799CA /* Sources */,
-				25088E4129D1B7C2006799CA /* Frameworks */,
-				25088E4229D1B7C2006799CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				25088E4629D1B7C2006799CA /* PBXTargetDependency */,
-			);
-			name = CleverAppUITests;
-			productName = CleverAppUITests;
-			productReference = 25088E4429D1B7C2006799CA /* CleverAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -422,14 +329,6 @@
 					25088E2A29D1B7BE006799CA = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					25088E3929D1B7C1006799CA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 25088E2A29D1B7BE006799CA;
-					};
-					25088E4329D1B7C2006799CA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 25088E2A29D1B7BE006799CA;
-					};
 				};
 			};
 			buildConfigurationList = 25088DCA29CDD33D006799CA /* Build configuration list for PBXProject "CleverImage" */;
@@ -448,8 +347,6 @@
 				25088DCF29CDD33D006799CA /* CleverImage */,
 				25088DD729CDD33E006799CA /* CleverImageTests */,
 				25088E2A29D1B7BE006799CA /* CleverApp */,
-				25088E3929D1B7C1006799CA /* CleverAppTests */,
-				25088E4329D1B7C2006799CA /* CleverAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,20 +373,6 @@
 			files = (
 				25088E3529D1B7C1006799CA /* Preview Assets.xcassets in Resources */,
 				25088E3229D1B7C1006799CA /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25088E3829D1B7C1006799CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25088E4229D1B7C2006799CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,23 +416,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25088E3629D1B7C1006799CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25088E3F29D1B7C2006799CA /* CleverAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25088E4029D1B7C2006799CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25088E4929D1B7C2006799CA /* CleverAppUITests.swift in Sources */,
-				25088E4B29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -557,16 +423,6 @@
 			isa = PBXTargetDependency;
 			target = 25088DCF29CDD33D006799CA /* CleverImage */;
 			targetProxy = 25088DDA29CDD33E006799CA /* PBXContainerItemProxy */;
-		};
-		25088E3C29D1B7C2006799CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25088E2A29D1B7BE006799CA /* CleverApp */;
-			targetProxy = 25088E3B29D1B7C2006799CA /* PBXContainerItemProxy */;
-		};
-		25088E4629D1B7C2006799CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25088E2A29D1B7BE006799CA /* CleverApp */;
-			targetProxy = 25088E4529D1B7C2006799CA /* PBXContainerItemProxy */;
 		};
 		25088E5D29D1CCB2006799CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -868,90 +724,6 @@
 			};
 			name = Release;
 		};
-		25088E4E29D1B7C2006799CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93RW74SNFB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleverApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleverApp";
-			};
-			name = Debug;
-		};
-		25088E4F29D1B7C2006799CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93RW74SNFB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleverApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleverApp";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		25088E5029D1B7C2006799CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93RW74SNFB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CleverApp;
-			};
-			name = Debug;
-		};
-		25088E5129D1B7C2006799CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93RW74SNFB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = es.jorgifumi.CleverAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CleverApp;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -987,24 +759,6 @@
 			buildConfigurations = (
 				25088E4C29D1B7C2006799CA /* Debug */,
 				25088E4D29D1B7C2006799CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		25088E5329D1B7C2006799CA /* Build configuration list for PBXNativeTarget "CleverAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25088E4E29D1B7C2006799CA /* Debug */,
-				25088E4F29D1B7C2006799CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		25088E5429D1B7C2006799CA /* Build configuration list for PBXNativeTarget "CleverAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25088E5029D1B7C2006799CA /* Debug */,
-				25088E5129D1B7C2006799CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
