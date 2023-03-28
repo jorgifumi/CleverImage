@@ -25,10 +25,7 @@ struct SignInView: View {
         VStack {
             if let image,
                let uiImage = UIImage(data: image.data) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding()
+                SucessView(uiImage: uiImage, action: signOut)
             } else {
                 TextField("Username", text: $username)
                     .autocorrectionDisabled(true)
@@ -76,11 +73,15 @@ struct SignInView: View {
                 self.image = image
                 errorMessage = ""
             case .failure(let error):
-                self.image = nil
+                signOut()
                 errorMessage = error.localizedDescription
             }
             isLoading = false
         }
+    }
+
+    private func signOut() {
+        self.image = nil
     }
 }
 
