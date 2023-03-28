@@ -23,32 +23,37 @@ struct SignInView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            TextField("Username", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+            if let image,
+               let uiImage = UIImage(data: image.data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            } else {
+                TextField("Username", text: $username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
 
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
 
-            Button(action: {
-                signIn()
-            }) {
-                if isLoading {
-                    ProgressView()
-                } else {
-                    Text("Sign In")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
+                Button(action: {
+                    signIn()
+                }) {
+                    if isLoading {
+                        ProgressView()
+                    } else {
+                        Text("Sign In")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
                 }
+                .padding()
+                Text(errorMessage)
             }
-            .padding()
-            Text(errorMessage)
         }
     }
 

@@ -28,6 +28,8 @@
 		25088E4B29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E4A29D1B7C2006799CA /* CleverAppUITestsLaunchTests.swift */; };
 		25088E5629D1BA69006799CA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E5529D1BA69006799CA /* SignInView.swift */; };
 		25088E5829D1BEBB006799CA /* MockSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25088E5729D1BEBB006799CA /* MockSignInUseCase.swift */; };
+		25088E5A29D1CCB2006799CA /* CleverImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; };
+		25088E5B29D1CCB2006799CA /* CleverImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25088DD029CDD33D006799CA /* CleverImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,28 @@
 			remoteGlobalIDString = 25088E2A29D1B7BE006799CA;
 			remoteInfo = CleverApp;
 		};
+		25088E5C29D1CCB2006799CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25088DC729CDD33D006799CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25088DCF29CDD33D006799CA;
+			remoteInfo = CleverImage;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		25088E5E29D1CCB3006799CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25088E5B29D1CCB2006799CA /* CleverImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		25088DD029CDD33D006799CA /* CleverImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleverImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25088E5A29D1CCB2006799CA /* CleverImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +156,7 @@
 				25088E3D29D1B7C2006799CA /* CleverAppTests */,
 				25088E4729D1B7C2006799CA /* CleverAppUITests */,
 				25088DD129CDD33D006799CA /* Products */,
+				25088E5929D1CCB2006799CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +266,13 @@
 			path = CleverAppUITests;
 			sourceTree = "<group>";
 		};
+		25088E5929D1CCB2006799CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -297,10 +329,12 @@
 				25088E2729D1B7BE006799CA /* Sources */,
 				25088E2829D1B7BE006799CA /* Frameworks */,
 				25088E2929D1B7BE006799CA /* Resources */,
+				25088E5E29D1CCB3006799CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				25088E5D29D1CCB2006799CA /* PBXTargetDependency */,
 			);
 			name = CleverApp;
 			productName = CleverApp;
@@ -507,6 +541,11 @@
 			isa = PBXTargetDependency;
 			target = 25088E2A29D1B7BE006799CA /* CleverApp */;
 			targetProxy = 25088E4529D1B7C2006799CA /* PBXContainerItemProxy */;
+		};
+		25088E5D29D1CCB2006799CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25088DCF29CDD33D006799CA /* CleverImage */;
+			targetProxy = 25088E5C29D1CCB2006799CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

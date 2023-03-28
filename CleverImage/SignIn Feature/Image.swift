@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Image: Equatable {
-    let data: Data
+    public let data: Data
 
     public init(data: Data = Data()) {
         self.data = data
