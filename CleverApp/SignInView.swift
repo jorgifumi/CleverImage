@@ -49,7 +49,7 @@ struct SignInView: View {
                         Text("Sign In")
                             .padding()
                             .foregroundColor(.white)
-                            .background(Color.blue)
+                            .background(Color.accentColor)
                             .cornerRadius(10)
                     }
                 }
