@@ -31,12 +31,16 @@ struct SignInView: View {
                     .padding()
             } else {
                 TextField("Username", text: $username)
+                    .autocorrectionDisabled(true)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textContentType(.username)
                     .disabled(isLoading)
                     .padding()
 
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textContentType(.password)
                     .disabled(isLoading)
                     .padding()
 
